@@ -1,0 +1,54 @@
+{
+  "target_device": "Xiaomi Pad 6S Pro 12.4 (sheng / SM8550)",
+  "dual_boot_layout": {
+    "slot_a": "Android (HyperOS / stock)",
+    "slot_b": "iPadOS 27 / UniXNU (persistent 50 GB)"
+  },
+  "source_repo": "https://github.com/KuriyamaMirai08/UniXNU-sheng",
+  "branch": "codex/stage0c3-diag-greenbar",
+  "tag": "dualboot-50g-d8",
+  "commit": "32b196d69c46ebbc87bb2308fed8bd8dc49baf33",
+  "ci_run_id": "45345094577",
+  "kernel_macho": {
+    "bytes": 98811904,
+    "sealed_sha256": "d50af190185006f0ab6197ad6e51be889f51777b762155697f4778c76219c1e4"
+  },
+  "boot_b_img": {
+    "format": "Android boot v3",
+    "bytes": 185733120,
+    "uefi_raw_bytes": 3145920,
+    "uefi_gzip_plus_dtb_bytes": 1179599,
+    "fat32_ramdisk_bytes": 184549376
+  },
+  "vendor_boot_b_img": {
+    "format": "Android vendor_boot v3 (noramdisk)",
+    "bytes": 3891200,
+    "ramdisk_size": 0,
+    "dtb_size": 3885131
+  },
+  "darwin_partition": {
+    "total_4k_blocks": 18874363,
+    "approx_gib": 72.0,
+    "apfs_data_logical_bytes": 51539607552,
+    "apfs_data_pages_4k": 12582912,
+    "walv2_window_blocks": 12624640,
+    "walv2_ring_blocks": 16380,
+    "ledger_blocks": 16,
+    "ledger_guard_blocks": 1024
+  },
+  "d8_optimizations": [
+    "Constant-time boot mount (verifyBase=false) + runtime ScratchBuf<>::ckCache + coalesced verifyEffectiveUnlocked",
+    "Removed top 13+5 diagnostic color bars while preserving arm_vm_init.c phystokv fix, start.s TTBR1[0] FB mapping, sleh.c, and hwtrace.c red panic screen"
+  ],
+  "host_verification": {
+    "run_stage0c2e_host_wal_v2_lifecycle": "151/151 PASS (unacceptable_corrupt_results=0)",
+    "arm64_stack_audit": "163 driver functions scanned, >=4KiB frames=0, bl ___chkstk_darwin=0, cxa_guard=0",
+    "cpp_tests": [
+      "test_d5_negative",
+      "test_ufs_sync_negative",
+      "test_d6_full_wal",
+      "test_d7_verify",
+      "test_d8_verify"
+    ]
+  }
+}

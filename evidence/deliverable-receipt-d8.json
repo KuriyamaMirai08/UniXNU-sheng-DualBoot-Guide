@@ -1,0 +1,12 @@
+{
+  "raw_kernel_bytes": 98811904,
+  "raw_kernel_sha256": "637aa39be6d9a7d47efb3c55893b843a0f84c7f0fc4478259e799604ae2902ab",
+  "sealed_kernel_bytes": 98811904,
+  "sealed_kernel_sha256": "d50af190185006f0ab6197ad6e51be889f51777b762155697f4778c76219c1e4",
+  "gzip_bytes": 29336487,
+  "gzip_sha256": "7e3494bab99ca7fa82809427f7954a383115d31050b8d2a146889eb548f8ede7",
+  "encrypted_bytes": 29336515,
+  "encrypted_sha256": "716de336b68cc68d8975b14eb76acffe5482f69f7d5308766e351391ca071e12",
+  "root_policies_sha256": "e0787c6c86441714f090642594c97dee5b8bfb472278823bcde1cfa9a8a3b46b",
+  "aad": "unixnu-sheng-deliverable-20261123"
+}
